@@ -1,0 +1,88 @@
+.tasks {
+	&__title {
+   font-family: Montserrat;
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 39px;
+   color: #64C4ED;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(242, 242, 242, 1);
+
+
+	img {
+		margin-left: 15px;
+		cursor: pointer;
+		opacity: 0;
+	}
+
+	}
+
+	&__items {
+		margin-top: 30px;
+		&-row {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			input {
+				margin-left: 15px;
+				width: 100%;
+				font-size: 16px;
+				border: none;
+			}
+		}
+	}
+
+	.checkbox {
+		
+		&:hover {
+			label {
+				background-color: #F2F2F2;
+				border-color: #F2F2F2;
+				svg {
+					opacity: 1;
+				path {
+					stroke: #B3B3B3; 
+				}
+				}
+			}
+		}
+
+
+		input {
+			display: none;
+		}
+
+		input:checked + label {
+			background-color: rgba(77, 213, 153, 1);
+			border-color: rgba(77, 213, 153, 1);
+			svg {
+				opacity: 1;
+				path {
+					stroke: #fff;
+
+				}
+			}
+		}
+		
+		label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid #e8e8e8;
+		border-radius: 30px;
+		width: 20px;
+		height: 20px;
+		transition: opacity 0.15s ease-in-out;
+		cursor: pointer;
+
+      svg {
+			transition: opacity 0.15s ease-in-out;
+			opacity: 0;
+			path {
+				stroke: #F2F2F2;
+			}
+		}
+		}
+	}
+}
+

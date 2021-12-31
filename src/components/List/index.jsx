@@ -17,6 +17,7 @@ const List = ({ items, isRemoveable, onClick, onRemove }) => {
     }
   };
 
+
   return (
     <ul onClick={onClick} className='list'>
       {items.map((item, index) => (
@@ -25,7 +26,10 @@ const List = ({ items, isRemoveable, onClick, onRemove }) => {
           className={classNames(item.className, { active: item.active })}
         >
           <i>{item.icon ? item.icon : <Badge color={item.color.name}></Badge>}</i>
-          <span>{item.name}</span>
+          <span>
+				 {item.name} 
+				 {item.tasks && (` (${item.tasks.length})`)}
+			</span>
           {isRemoveable && (
             <img
               onClick={() => ifRemove(item)}

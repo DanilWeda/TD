@@ -5,7 +5,6 @@ import penSvg from '../../assets/img/pen.svg';
 
 const Task = ({list}) => {
 
-	console.log(list.tasks[0].text)
 
   return (
     <div className='tasks'>

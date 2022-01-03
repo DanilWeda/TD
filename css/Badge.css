@@ -1,0 +1,39 @@
+.badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.badge--grey {
+  background: #C9D1D3;
+}
+
+.badge--green {
+  background: #42B883;
+}
+
+.badge--blue {
+  background: #64C4ED;
+}
+
+.badge--pink {
+  background: #FFBBCC;
+}
+
+.badge--lime {
+  background: #B6E6BD;
+}
+
+.badge--purple {
+  background: #C355F5;
+}
+
+.badge--black {
+  background: #110133;
+}
+
+.badge--red {
+  background: #FF6464;
+}
+/*# sourceMappingURL=Badge.css.map */

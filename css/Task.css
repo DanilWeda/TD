@@ -1,0 +1,109 @@
+.tasks__title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #64C4ED;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.tasks__title img {
+  margin-left: 15px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.tasks__items {
+  margin-top: 30px;
+}
+
+.tasks__items h2 {
+  width: 347px;
+  height: 39px;
+  left: 303px;
+  top: 234px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #C9D1D3;
+}
+
+.tasks__items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.tasks__items-row input {
+  margin-left: 15px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+}
+
+.tasks .checkbox:hover label {
+  background-color: #F2F2F2;
+  border-color: #F2F2F2;
+}
+
+.tasks .checkbox:hover label svg {
+  opacity: 1;
+}
+
+.tasks .checkbox:hover label svg path {
+  stroke: #B3B3B3;
+}
+
+.tasks .checkbox input {
+  display: none;
+}
+
+.tasks .checkbox input:checked + label {
+  background-color: #4dd599;
+  border-color: #4dd599;
+}
+
+.tasks .checkbox input:checked + label svg {
+  opacity: 1;
+}
+
+.tasks .checkbox input:checked + label svg path {
+  stroke: #fff;
+}
+
+.tasks .checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #e8e8e8;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.tasks .checkbox label svg {
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.tasks .checkbox label svg path {
+  stroke: #F2F2F2;
+}
+/*# sourceMappingURL=Task.css.map */

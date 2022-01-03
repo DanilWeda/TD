@@ -3,17 +3,25 @@ import React from 'react';
 import './Task.scss';
 import penSvg from '../../assets/img/pen.svg';
 
-const Task = ({list}) => {
+const Task = ({list, onEditTitle}) => {
+
+	const editTitle = ()  => {
+		const newTitle = prompt('Название списка', list.name)
+		if (newTitle) {
+			onEditTitle(list.id, newTitle)
+		}
+	}
 
 
   return (
     <div className='tasks'>
       <h2 className='tasks__title'>
         {list.name}
-        <img src={penSvg} alt='edit icon' />
+        <img src={penSvg} alt='edit icon' onClick={editTitle}/>
       </h2>
 
       <div className='tasks__items'>
+			{!list.tasks.length && <h2>Задачи отсутствуют</h2>}
         {list.tasks.map((task) => (
           <div key={task.id} className='tasks__items-row'>
             <div className='checkbox'>

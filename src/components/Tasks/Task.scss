@@ -2,11 +2,19 @@
 	&__title {
    font-family: Montserrat;
    font-weight: bold;
-   font-size: 32px;
-   line-height: 39px;
+   font-size: 22px;
    color: #64C4ED;
 	padding-bottom: 20px;
 	border-bottom: 1px solid rgba(242, 242, 242, 1);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+	&:hover {
+		img {
+			opacity: 1;
+		}
+	}
 
 
 	img {
@@ -19,6 +27,19 @@
 
 	&__items {
 		margin-top: 30px;
+	
+		h2 {
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 22px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+
+	color: #C9D1D3;
+		}
+		
 		&-row {
 			display: flex;
 			align-items: center;

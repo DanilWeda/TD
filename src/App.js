@@ -9,6 +9,7 @@ import Task from './components/Tasks/Task.jsx';
 function App() {
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     axios
@@ -52,6 +53,7 @@ function App() {
               active: false,
             },
           ]}
+			 
         />
         {lists ? (
           <List
@@ -60,14 +62,16 @@ function App() {
               const newLists = lists.filter((item) => item.id !== id);
               setLists(newLists);
             }}
+				onClickItem={item => setActiveItem(item)}
             isRemoveable
+				isActive={activeItem}
           />
         ) : (
           'Загрузка...'
         )}
         <BtnListAdd onAdd={onAddList} colors={colors} />
       </div>
-      <div className='todo__tasks'>{lists && <Task list={lists[1]} />}</div>
+      <div className='todo__tasks'>{lists && activeItem && <Task list={activeItem} onEditTitle={(id, title) => {console.log(id, title)}} />}</div>
     </div>
   );
 }

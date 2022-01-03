@@ -1,0 +1,46 @@
+.add-btn__popup {
+  width: 240px;
+  height: 150px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 18px;
+  position: relative;
+  top: -25px;
+  left: 10px;
+}
+
+.add-btn__popup-colors {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.add-btn__popup-colors .badge {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.add-btn__popup-colors .badge.active {
+  border: 2px solid #525252;
+}
+
+.add-btn__popup-close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+
+.add-btn .button {
+  width: 100%;
+  margin: 15px 0;
+}
+/*# sourceMappingURL=BtnListAdd.css.map */

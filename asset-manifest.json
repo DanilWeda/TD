@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tdvisit/static/css/main.9518b736.css",
+    "main.js": "/tdvisit/static/js/main.96d6ead4.js",
+    "static/media/close.svg": "/tdvisit/static/media/close.ac7b9278cab353907f42c5983ebc5569.svg",
+    "static/media/remove.svg": "/tdvisit/static/media/remove.618167a43b6d4de873ade4ad37891d0d.svg",
+    "static/media/pen.svg": "/tdvisit/static/media/pen.d48cb0239be10abedf14eb19ed430155.svg",
+    "index.html": "/tdvisit/index.html",
+    "static/media/add.svg": "/tdvisit/static/media/add.bb82cf258224298ee8e8019bff6b7e1c.svg",
+    "main.9518b736.css.map": "/tdvisit/static/css/main.9518b736.css.map",
+    "main.96d6ead4.js.map": "/tdvisit/static/js/main.96d6ead4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9518b736.css",
+    "static/js/main.96d6ead4.js"
+  ]
+}

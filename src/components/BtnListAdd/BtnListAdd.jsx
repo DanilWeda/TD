@@ -1,58 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import Badge from '../Badge/Badge';
-import List from '../List';
+import React, { useState, useEffect } from 'react'
+import Badge from '../Badge/Badge'
+import List from '../List'
 import axios from 'axios'
 
-import closeSvg from '../../assets/img/close.svg';
+import closeSvg from '../../assets/img/close.svg'
 
-import './BtnListAdd.scss';
+import './BtnListAdd.scss'
 
 const BtnListAdd = ({ colors, onAdd }) => {
-
-  const [visiable, setVisiable] = useState(false);
-  const [selectedColor, selectColor] = useState(3);
-  const [isLoading, setIsLoading] = useState(false);
-  const [inputValue, setInputValue] = useState('');
+  const [visiable, setVisiable] = useState(false)
+  const [selectedColor, selectColor] = useState(3)
+  const [isLoading, setIsLoading] = useState(false)
+  const [inputValue, setInputValue] = useState('')
 
   useEffect(() => {
     if (Array.isArray(colors)) {
-      selectColor(colors[0].id);
+      selectColor(colors[0].id)
     }
-  }, [colors]);
+  }, [colors])
 
   const onClose = () => {
-    setVisiable(false);
-    setInputValue('');
-    selectColor(colors[0].id);
-  };
+    setVisiable(false)
+    setInputValue('')
+    selectColor(colors[0].id)
+  }
 
   const addList = () => {
     if (!inputValue) {
-      alert('Введите название списка');
-      return;
+      alert('Введите название списка')
+      return
     }
-    setIsLoading(true);
+    setIsLoading(true)
     axios
       .post('http://localhost:3001/lists', {
         name: inputValue,
         colorId: selectedColor,
       })
       .then(({ data }) => {
-        const color = colors.filter((c) => c.id === selectedColor)[0].name;
-        const listObj = { ...data, color: { name: color } };
-        onAdd(listObj);
-        onClose();
+        const color = colors.filter((c) => c.id === selectedColor)[0]
+        const listObj = { ...data, color, tasks: [] }
+        onAdd(listObj)
+        onClose()
       })
+      .catch(() => alert('Ошибка при добавлении'))
       .finally(() => {
-        setIsLoading(false);
-      });
-  };
+        setIsLoading(false)
+      })
+  }
 
   return (
     <div className='add-btn'>
       <List
         onClick={() => {
-          setVisiable(true);
+          setVisiable(true)
         }}
         items={[
           {
@@ -62,8 +62,7 @@ const BtnListAdd = ({ colors, onAdd }) => {
                 height='12'
                 viewBox='0 0 12 12'
                 fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
+                xmlns='http://www.w3.org/2000/svg'>
                 <path
                   d='M6 1V11'
                   stroke='#868686'
@@ -105,7 +104,7 @@ const BtnListAdd = ({ colors, onAdd }) => {
             {colors.map((color) => (
               <Badge
                 onClick={() => {
-                  selectColor(color.id);
+                  selectColor(color.id)
                 }}
                 key={color.id}
                 color={color.name}
@@ -119,7 +118,7 @@ const BtnListAdd = ({ colors, onAdd }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default BtnListAdd;
+export default BtnListAdd

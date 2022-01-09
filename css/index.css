@@ -18,9 +18,9 @@
   width: 730px;
   height: 530px;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-box-shadow: 1px 2px 20px #f3f3f3;
-          box-shadow: 1px 2px 20px #f3f3f3;
+  box-shadow: 1px 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 1px solid #f4f6f8;
   font-size: 14px;
@@ -36,13 +36,13 @@
 
 .todo__tasks {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 60px;
 }
 
 .button {
-  background: #4DD599;
+  background: #4dd599;
   border-radius: 4px;
   color: #fff;
   border: 0;
@@ -59,13 +59,14 @@
 }
 
 .field {
-  background: #FFFFFF;
-  border: 1px solid #EFEFEF;
+  background: #ffffff;
+  border: 1px solid #efefef;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 }
 
 .field:focus {
